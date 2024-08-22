@@ -1,4 +1,5 @@
 from django.contrib import admin
+from unfold.admin import ModelAdmin
 
 from hello.models import Notebook, ContentRevision
 
@@ -9,5 +10,5 @@ class ContentRevisionInline(admin.TabularInline):
 
 
 @admin.register(Notebook)
-class NotebookAdmin(admin.ModelAdmin):
+class NotebookAdmin(ModelAdmin):
     inlines = (ContentRevisionInline, )
