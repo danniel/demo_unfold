@@ -1,0 +1,4 @@
+django==5.1.0
+django-unfold==0.36.0
+python-fossil-delta==18.11.27
+
