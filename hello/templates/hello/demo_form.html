@@ -10,10 +10,16 @@
         A form which does nothing.
     </p>
 
-    <form method="POST" action="">
-        {{ form }}
-        {% csrf_token %}
-        <input type="submit" value="Send" />
-    </form>
+    <div>
+        <form method="POST" action="">
+            
+            {% for field in form %}
+                {% include "unfold/helpers/field.html" with field=field %}
+            {% endfor %}
+
+            {% csrf_token %}
+            <input type="submit" value="Send" />
+        </form>
+    </div>
 
 {% endblock %}
