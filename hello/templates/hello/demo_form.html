@@ -1,0 +1,19 @@
+{% extends "unfold/layouts/base.html" %}
+
+{% block content %}
+    <p>
+        A form which does nothing.
+        A form which does nothing.
+        A form which does nothing.
+        A form which does nothing.
+        A form which does nothing.
+        A form which does nothing.
+    </p>
+
+    <form method="POST" action="">
+        {{ form }}
+        {% csrf_token %}
+        <input type="submit" value="Send" />
+    </form>
+
+{% endblock %}
